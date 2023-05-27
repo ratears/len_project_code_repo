@@ -28,7 +28,7 @@ public class CommonResponseDataAdvice implements ResponseBodyAdvice<Object> {
         if(returnType.getMethod().isAnnotationPresent(IgnoreAnnotationAdvice.class)){
             return false;
         }
-        if(converterType.getDeclaringClass().isAnnotationPresent(IgnoreAnnotationAdvice.class)){
+        if(returnType.getDeclaringClass().isAnnotationPresent(IgnoreAnnotationAdvice.class)){
             return false;
         }
 
